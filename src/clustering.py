@@ -14,7 +14,7 @@ from sklearn.decomposition import PCA
 # =========================
 # Paths
 # =========================
-CLUSTER_DATA_PATH = r"C:\Users\khaled-rahma\Desktop\test\Diabetes-Patient-Classification-and-Clustering-System\data\processed\diabetes_clustering.csv"
+CLUSTER_DATA_PATH = r"data/processed/diabetes_clustering.csv"
 
 st.set_page_config(page_title="Diabetes Patient Clustering", layout="wide")
 
