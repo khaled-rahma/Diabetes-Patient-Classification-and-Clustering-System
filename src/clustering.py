@@ -1,3 +1,4 @@
+
 # app/main_streamlit_clustering_full_with_index_pca.py
 
 import streamlit as st
@@ -57,9 +58,18 @@ best_k = knee.knee
 
 st.subheader("Elbow Method")
 fig, ax = plt.subplots(figsize=(8,5))
-ax.plot(K_range, inertia, marker='o')
+
+# رسم كل النقاط مع marker
+ax.plot(K_range, inertia, marker='o', linestyle='-', color='blue', label='Inertia')
+
+# خط عمودي عند best_k
 ax.axvline(best_k, color='red', linestyle='--', label=f'Best K = {best_k}')
-ax.set_xlabel("Number of clusters")
+
+# تظليل المنطقة بعد best_k لإظهار الاستقرار
+ax.fill_between(K_range, inertia, max(inertia), where=[k>=best_k for k in K_range],
+                color='red', alpha=0.1)
+
+ax.set_xlabel("Number of clusters (K)")
 ax.set_ylabel("Inertia")
 ax.set_title("Elbow Method for Optimal K")
 ax.legend()
