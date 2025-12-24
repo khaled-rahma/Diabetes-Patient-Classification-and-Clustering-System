@@ -6,13 +6,13 @@ from sklearn.model_selection import train_test_split
 # =========================
 # Paths
 # =========================
-RAW_DATA_PATH = r"C:\Users\khaled-rahma\Desktop\test\Diabetes-Patient-Classification-and-Clustering-System\data\raw\diabetes_012.csv"
+RAW_DATA_PATH = r"data/raw/diabetes_012.csv"
 
 
-PROCESSED_DATA_PATH = r"C:\Users\khaled-rahma\Desktop\test\Diabetes-Patient-Classification-and-Clustering-System\data\processed\diabetes_processed.csv"
-CLUSTER_DATA_PATH   = r"C:\Users\khaled-rahma\Desktop\test\Diabetes-Patient-Classification-and-Clustering-System\data\processed\diabetes_clustering.csv"
-TRAIN_DATA_PATH     = r"C:\Users\khaled-rahma\Desktop\test\Diabetes-Patient-Classification-and-Clustering-System\data\processed\train.csv"
-TEST_DATA_PATH      = r"C:\Users\khaled-rahma\Desktop\test\Diabetes-Patient-Classification-and-Clustering-System\data\processed\test.csv"
+PROCESSED_DATA_PATH = r"data/processed/diabetes_processed.csv"
+CLUSTER_DATA_PATH   = r"data/processed/diabetes_clustering.csv"
+TRAIN_DATA_PATH     = r"data/processed/train.csv"
+TEST_DATA_PATH      = r"data/processed/test.csv"
 
 
 def handle_missing_values(df):
