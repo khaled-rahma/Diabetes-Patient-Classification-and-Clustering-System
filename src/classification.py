@@ -50,9 +50,9 @@ MODELS = {
 
 SCORING = {
     "accuracy": "accuracy",
-    "precision": "precision",
-    "recall": "recall",
-    "roc_auc": "roc_auc"
+    "precision": "precision_weighted",
+    "recall": "recall_weighted",
+    "roc_auc_ovr": "roc_auc_ovr"
 }
 
 
@@ -107,14 +107,14 @@ def main():
                 "Accuracy": scores["test_accuracy"].mean(),
                 "Precision": scores["test_precision"].mean(),
                 "Recall": scores["test_recall"].mean(),
-                "ROC_AUC": scores["test_roc_auc"].mean()
+                "ROC_AUC": scores["test_roc_auc_ovr"].mean()
             })
 
             print(
                 f"  Results → "
                 f"Accuracy={scores['test_accuracy'].mean():.3f}, "
                 f"Recall={scores['test_recall'].mean():.3f}, "
-                f"ROC_AUC={scores['test_roc_auc'].mean():.3f}"
+                f"ROC_AUC={scores['test_roc_auc_ovr'].mean():.3f}"
             )
 
     print("\n======================================")
